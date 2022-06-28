@@ -6,21 +6,13 @@
 	--number-size: 2.5em;
 }
 
-html, body {
-	margin: 0;
-	padding: 0;
-	height: 100%;
-}
-
-body {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+li {
+	font-size: 1.5em;
 }
 
 div.chart {
 	display: flex;
-	/* justify-content: center; */
+	justify-content: center;
 }
 
 div.chart div {
@@ -33,11 +25,11 @@ div.chart div {
 	text-align: center;
 }
 
-div.chart div b.color-red { color: red !important; }
-div.chart div b.color-green { color: green !important; }
-div.chart div b.color-blue { color: blue !important; }
-div.chart div b.color-orange { color: orange !important; }
-div.chart div b.color-violet { color: violet !important; }
+div.chart div b.color-red, li.color-red { color: red !important; }
+div.chart div b.color-green, li.color-green { color: green !important; }
+div.chart div b.color-blue, li.color-blue { color: blue !important; }
+div.chart div b.color-orange, li.color-orange { color: orange !important; }
+div.chart div b.color-violet, li.color-violet { color: violet !important; }
 
 div.chart div b {
 	font-size: var(--number-size);
