@@ -6,9 +6,21 @@
 	--number-size: 2.5em;
 }
 
-div.chart {
+html, body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
+body {
 	display: flex;
 	justify-content: center;
+	align-items: center;
+}
+
+div.chart {
+	display: flex;
+	/* justify-content: center; */
 }
 
 div.chart div {
