@@ -21,6 +21,12 @@ div.chart div {
 	text-align: center;
 }
 
+div.chart div b.color-red { color: red !important; }
+div.chart div b.color-green { color: green !important; }
+div.chart div b.color-blue { color: blue !important; }
+div.chart div b.color-orange { color: orange !important; }
+div.chart div b.color-violet { color: violet !important; }
+
 div.chart div b {
 	font-size: var(--number-size);
 }
