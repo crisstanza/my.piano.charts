@@ -17,10 +17,10 @@ a:hover { text-decoration: underline; }
 .column-2 { flex: 50%; }
 
 div.legend, footer { text-align: center; }
-footer { padding-top: 50px; }
+footer { padding-top: 75px; }
 
 div.legend span { font-size: 1.5em; }
-div.legend span:not(:last-child) { padding-right: 20px; }
+div.legend span:not(:last-child) { padding-right: 50px; }
 
 div.chart {
 	display: flex;
