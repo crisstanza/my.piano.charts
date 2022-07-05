@@ -1,3 +1,3 @@
-# Piano Charts
+# My Piano Charts
 
-https://crisstanza.github.io/piano-charts/
+https://crisstanza.github.io/my.piano.charts/
