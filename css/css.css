@@ -16,7 +16,8 @@ a:hover { text-decoration: underline; }
 .row { display: flex; }
 .column-2 { flex: 50%; }
 
-div.legend { text-align: center; }
+div.legend, footer { text-align: center; }
+footer { padding-top: 50px; }
 
 div.legend span { font-size: 1.5em; }
 div.legend span:not(:last-child) { padding-right: 20px; }
