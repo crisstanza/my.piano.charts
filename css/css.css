@@ -6,13 +6,20 @@
 	--number-size: 2.5em;
 }
 
-li {
-	font-size: 2em;
-	float: left;
-	width: 200px;
-}
+* { font-family: Arial; }
+a, a:visited { color: black; text-decoration: none; }
+a:hover { text-decoration: underline; }
 
-.off { display: none !important; }
+.out { display: none !important; }
+.off { opacity: 0.25; }
+
+.row { display: flex; }
+.column-2 { flex: 50%; }
+
+div.legend { text-align: center; }
+
+div.legend span { font-size: 1.5em; }
+div.legend span:not(:last-child) { padding-right: 20px; }
 
 div.chart {
 	display: flex;
@@ -29,11 +36,11 @@ div.chart div {
 	text-align: center;
 }
 
-div.chart div b.color-red, li.color-red { color: red !important; }
-div.chart div b.color-green, li.color-green { color: green !important; }
-div.chart div b.color-blue, li.color-blue { color: blue !important; }
-div.chart div b.color-orange, li.color-orange { color: orange !important; }
-div.chart div b.color-violet, li.color-violet { color: violet !important; }
+div.chart div b.color-red, div.legend span.color-red { color: red !important; }
+div.chart div b.color-green, div.legend span.color-green { color: green !important; }
+div.chart div b.color-blue, div.legend span.color-blue { color: blue !important; }
+div.chart div b.color-orange, div.legend span.color-orange { color: orange !important; }
+div.chart div b.color-violet, div.legend span.color-violet { color: violet !important; }
 
 div.chart div b {
 	font-size: var(--number-size);

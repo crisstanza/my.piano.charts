@@ -2,11 +2,9 @@
 
 	function init(event) {
 		const charts = document.querySelectorAll('div.chart[start][size]');
-		charts.forEach((value, i, parent) => {
-			// console.log(value, i, parent);
-			const charter = new Charter(value);
-			charter.render();
-		});
+		charts.forEach((chart) => new Charter(chart).render());
+		const legends = document.querySelectorAll('div.legend.left-hand, div.legend.right-hand');
+		legends.forEach((legend) => new Legender(legend).render());
 	}
 
 	window.addEventListener('load', init);
