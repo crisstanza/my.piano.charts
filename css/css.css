@@ -1,9 +1,10 @@
 :root {
-	--white-height: 300px;
+	--white-height: 250px;
 	--white-width: 90px;
-	--black-height: 200px;
+	--black-height: 160px;
 	--black-width: 50px;
 	--number-size: 2.5em;
+	--number-n-size: 1.5em;
 }
 
 * { font-family: Arial; }
@@ -13,8 +14,18 @@ a:hover { text-decoration: underline; }
 .out { display: none !important; }
 .off { opacity: 0.25; }
 
-.row { display: flex; }
-.column-2 { flex: 50%; }
+.row { display: flex; padding-bottom: 25px; }
+.column-n {
+	flex: 4%;
+	display: grid;
+	align-items: center;
+	text-align: center;
+	font-size: var(--number-n-size);
+	font-style: italic;
+}
+
+.column-2 { flex: 48%; }
+.column-2:not(:last-child) { padding-right: 25px; }
 
 div.legend, footer { text-align: center; }
 footer { padding-top: 75px; }
