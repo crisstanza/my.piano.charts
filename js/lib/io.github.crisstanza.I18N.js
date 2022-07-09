@@ -14,12 +14,13 @@ if (!io.github.crisstanza.I18N) io.github.crisstanza.I18N = {};
 	io.github.crisstanza.I18N.getValue = (key, currentLanguage) => {
 		currentLanguage = currentLanguage ? currentLanguage : navigator.language;
 		const keys = io.github.crisstanza.I18N.keys;
-		const language = keys.languages.findIndex(language => language == currentLanguage);
-		if (language > -1) {
-			const values = keys.values[key];
-			if (values) {
-				return values[language];
-			}
+		let language = keys.languages.findIndex(language => language == currentLanguage);
+		if (language == -1) {
+			language = 0;
+		}
+		const values = keys.values[key];
+		if (values) {
+			return values[language];
 		}
 		return `???${key}???`;
 	};
