@@ -38,6 +38,7 @@ div.legend span:not(:last-child) { padding-right: 50px; }
 div.chart {
 	display: flex;
 	justify-content: center;
+	user-select: none;
 }
 
 div.chart div {
@@ -48,6 +49,17 @@ div.chart div {
 	flex-direction: column;
 	justify-content: end;
 	text-align: center;
+}
+
+div.chart div[freq] {
+	cursor: pointer;
+}
+
+div.chart div[freq]:active {
+	border-style: double;
+}
+div.chart div.black[freq]:active {
+	border-color: white;
 }
 
 div.chart div b.color-red, div.legend span.color-red { color: red !important; }
@@ -65,6 +77,7 @@ div.chart div.white b.color-violet { color: #9C27B0 !important; }
 div.chart div b {
 	font-size: var(--number-size);
     letter-spacing: -1px;
+	pointer-events: none; 
 }
 
 div.chart div.black b {
