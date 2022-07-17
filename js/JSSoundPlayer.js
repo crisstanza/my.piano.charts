@@ -14,7 +14,7 @@ class JSSoundPlayer {
 		}
 	}
 
-	static #MAX_VOLUME = 0.75;
+	static #MAX_VOLUME = 0.5;
 
 	static #DEFAULT_OCTAVE = 4;
 
