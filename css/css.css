@@ -1,14 +1,47 @@
 :root {
-	--white-height: 250px;
-	--white-width: 90px;
-	--black-height: 160px;
-	--black-width: 55px;
-	--number-size: 1.75em;
-	--number-n-size: 1em;
+	--default-white-height: 250px;
+	--default-white-width: 90px;
+	--default-black-height: 160px;
+	--default-black-width: 55px;
+	--default-body-size: 1.5em;
+	--default-number-size: 1.75em;
+	--default-number-n-size: 1em;
+	--small-size-multi: 0.7;
+	--medium-size-multi: 0.85;
+}
+
+:root {
+	--white-height: var(--default-white-height);
+	--white-width: var(--default-white-width);
+	--black-height: var(--default-black-height);
+	--black-width: var(--default-black-width);
+	--body-size: var(--default-body-size);
+	--number-size: var(--default-number-size);
+	--number-n-size: var(--default-number-n-size);
+}
+
+body.small {
+	--white-height: calc(var(--default-white-height) * var(--small-size-multi));
+	--white-width: calc(var(--default-white-width) * var(--small-size-multi));
+	--black-height: calc(var(--default-black-height) * var(--small-size-multi));
+	--black-width: calc(var(--default-black-width) * var(--small-size-multi));
+	--body-size: calc(var(--default-body-size) * var(--small-size-multi));
+	--number-size: calc(var(--default-number-size) * var(--small-size-multi));
+	--number-n-size: calc(var(--default-number-n-size) * var(--small-size-multi));
+}
+
+body.medium {
+	--white-height: calc(var(--default-white-height) * var(--medium-size-multi));
+	--white-width: calc(var(--default-white-width) * var(--medium-size-multi));
+	--black-height: calc(var(--default-black-height) * var(--medium-size-multi));
+	--black-width: calc(var(--default-black-width) * var(--medium-size-multi));
+	--body-size: calc(var(--default-body-size) * var(--medium-size-multi));
+	--number-size: calc(var(--default-number-size) * var(--medium-size-multi));
+	--number-n-size: calc(var(--default-number-n-size) * var(--medium-size-multi));
 }
 
 * { font-family: Arial; }
-body { font-size: 1.5em; }
+body { font-size: var(--body-size); margin: 0; padding: 0; }
 h1 { margin-top: 0; margin-bottom: 0; }
 a, a:visited { color: black; text-decoration: none; }
 a:hover { text-decoration: underline; }
@@ -22,7 +55,7 @@ a:hover { text-decoration: underline; }
 	display: grid;
 	align-items: center;
 	text-align: center;
-	_font-size: var(--number-n-size);
+	font-size: var(--number-n-size);
 	font-style: italic;
 }
 

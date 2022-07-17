@@ -2,6 +2,23 @@ class Charter {
 
 	static #KEYS = 'wbwbwwbwbwbw';
 
+	static fixSizes() {
+		window.removeEventListener('resize', Charter.fixSize);
+		document.body.classList.remove('small');
+		document.body.classList.remove('medium');
+		const bodyWidth = document.body.scrollWidth;
+		const windowWidth = window.innerWidth;
+		if (bodyWidth > window.innerWidth) {
+			document.body.classList.add('medium');
+		}
+		const newBodyWidth = document.body.scrollWidth;
+		if (newBodyWidth > windowWidth) {
+			document.body.classList.remove('medium');
+			document.body.classList.add('small');
+		}
+		window.addEventListener('resize', Charter.fixSizes);
+	}
+
 	constructor(parent) {
 		this.parent = parent;
 		this.start = parent.getAttribute('start');
