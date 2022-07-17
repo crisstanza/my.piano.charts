@@ -1,6 +1,18 @@
 class JSSoundPlayer {
 
-	static #FREQS = [261.63, 277.18, 293.66, 311.13, 329.63, 349.23, 369.99, 392, 415.3, 440, 466.16, 493.88];
+	static #FREQS = [-1, -1, -1, -1, -1, -1, -1, -1, -1, 440, -1, -1];
+	static #REFERENCE_FREQ_INDEX = 9;
+
+	static {
+		const multi = Math.pow(2, 1/12);
+		const length = JSSoundPlayer.#FREQS.length;
+		for (let i = JSSoundPlayer.#REFERENCE_FREQ_INDEX + 1; i < length ; i++) {
+			JSSoundPlayer.#FREQS[i] = JSSoundPlayer.#FREQS[i - 1] * multi;
+		}
+		for (let i = JSSoundPlayer.#REFERENCE_FREQ_INDEX - 1; i >= 0 ; i--) {
+			JSSoundPlayer.#FREQS[i] = JSSoundPlayer.#FREQS[i + 1] / multi;
+		}
+	}
 
 	static #MAX_VOLUME = 0.75;
 
