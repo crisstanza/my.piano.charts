@@ -3,10 +3,16 @@
 	<head>
 		<title>My Piano Charts</title>
 		<link rel="stylesheet" type="text/css" media="all" href="css/css.css" />
+		<link rel="stylesheet" type="text/css" media="all" href="css/i18n.css" />
+		<link rel="stylesheet" type="text/css" media="all" href="css/github.css" />
 		<script src="js/i18n.js"></script>
+		<script src="js/lib/io.github.crisstanza.Cookie-Is-Good_1.0.3.js"></script>
+		<script src="js/lib/io.github.crisstanza.Creator.js"></script>
 		<script src="js/lib/io.github.crisstanza.I18N.js"></script>
 	</head>
 	<body>
+
+		<div class="center" i18n-flags="us,br,fr,es"></div>
 
 		<h1>My Piano Charts</h1>
 
@@ -18,11 +24,16 @@
 		</ul>
 
 
-		<h2>Backing Tracks</h2>
+		<h2 i18n="Backing-Tracks">Backing Tracks</h2>
 
 		<ul>
 			<li><a target="_new" href="https://www.youtube.com/watch?v=uH1MrhJZ2NA&ab_channel=LumBeat">80 BPM - Simple Straight Beat - Drum Track</a></li>
 		</ul>
+
+		<br />
+		<footer class="center">
+			<a title="Source code on GitHub." target="_blank" href="https://github.com/crisstanza/my.piano.charts/"><img border="0" src="img/github.png" width="24" height="24" class="github-icon" /></a>
+		</footer>
 
 	</body>
 </html>

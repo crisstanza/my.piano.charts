@@ -1,0 +1,5 @@
+div[i18n-flags] { text-align: center; margin-bottom: 20px; }
+div[i18n-flags] a img { width: 27px; height: 17px; pointer-events: none; }
+div[i18n-flags] a:not(:last-child) { margin-right: 10px; }
+div[i18n-flags] a.on { opacity: 1; }
+div[i18n-flags] a.off { opacity: 0.25; }

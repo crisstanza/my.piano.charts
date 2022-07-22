@@ -65,8 +65,8 @@ a:hover { text-decoration: underline; }
 div.legend, footer { text-align: center; }
 footer { padding-top: 75px; }
 
-div.legend span { font-size: 1.5em; }
-div.legend span:not(:last-child) { padding-right: 50px; }
+div.legend span { white-space: nowrap; font-size: 1.5em; }
+div.legend span:not(:last-child) { padding-right: 40px; }
 
 div.chart {
 	display: flex;
