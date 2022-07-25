@@ -1,18 +1,19 @@
 class JSSoundPlayer {
 
-	static #FREQS = [-1, -1, -1, -1, -1, -1, -1, -1, -1, 440, -1, -1];
-	static #REFERENCE_FREQ_INDEX = 9;
-
-	static #MAX_VOLUME = 0.5;
-
+	static #FREQS = {
+		C: { reference: 9, freqs: [0, 0, 0, 0, 0, 0, 0, 0, 0, 440, 0, 0] },
+		F: { reference: 4, freqs: [0, 0, 0, 0, 440, 0, 0, 0, 0, 0, 0, 0] }
+	};
+	static #MAX_VOLUME = 0.1;
 	static #DEFAULT_OCTAVE = 4;
 
-	static getFreq(index, octave) {
-		octave = octave ? octave : JSSoundPlayer.#DEFAULT_OCTAVE;
+	static getFreq(index, startOctave) {
+		const octave = startOctave[1] ? startOctave[1] : JSSoundPlayer.#DEFAULT_OCTAVE;
+		const startFreq = startOctave[0];
 		let diff = octave - JSSoundPlayer.#DEFAULT_OCTAVE;
-		const nextOctave = Math.floor(index / JSSoundPlayer.#FREQS.length) + 1;
-		index %= JSSoundPlayer.#FREQS.length;
-		let freq = JSSoundPlayer.#FREQS[index] * nextOctave;
+		const nextOctave = Math.floor(index / JSSoundPlayer.#FREQS[startFreq].freqs.length) + 1;
+		index %= JSSoundPlayer.#FREQS[startFreq].freqs.length;
+		let freq = JSSoundPlayer.#FREQS[startFreq].freqs[index] * nextOctave;
 		if (diff < 0) {
 			while(diff < 0) {
 				freq /= 2;
@@ -32,19 +33,22 @@ class JSSoundPlayer {
 		this.down = false;
 		this.playing = {};
 		this.context = null;
-		this.#initFreqs();
+		this.#initAllFreqs();
 	}
 
-	#initFreqs() {
-		if (JSSoundPlayer.#FREQS[0] == -1) {
-			const multi = Math.pow(2, 1/12);
-			const length = JSSoundPlayer.#FREQS.length;
-			for (let i = JSSoundPlayer.#REFERENCE_FREQ_INDEX + 1; i < length ; i++) {
-				JSSoundPlayer.#FREQS[i] = JSSoundPlayer.#FREQS[i - 1] * multi;
-			}
-			for (let i = JSSoundPlayer.#REFERENCE_FREQ_INDEX - 1; i >= 0 ; i--) {
-				JSSoundPlayer.#FREQS[i] = JSSoundPlayer.#FREQS[i + 1] / multi;
-			}
+	#initAllFreqs() {
+		!JSSoundPlayer.#FREQS.C.freqs[0] && this.#initFreqs(JSSoundPlayer.#FREQS.C);
+		!JSSoundPlayer.#FREQS.F.freqs[0] && this.#initFreqs(JSSoundPlayer.#FREQS.F);
+	}
+
+	#initFreqs(start) {
+		const multi = Math.pow(2, 1/12);
+		const length = start.freqs.length;
+		for (let i = start.reference + 1; i < length ; i++) {
+			start.freqs[i] = start.freqs[i - 1] * multi;
+		}
+		for (let i = start.reference - 1; i >= 0 ; i--) {
+			start.freqs[i] = start.freqs[i + 1] / multi;
 		}
 	}
 

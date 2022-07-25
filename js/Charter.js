@@ -1,9 +1,13 @@
 class Charter {
 
-	static #KEYS = 'wbwbwwbwbwbw';
+	static #KEYS = {
+		C: 'wbwbwwbwbwbw',
+		F: 'wbwbwbwwbwbw'
+	};
 
 	static fixSizes() {
 		window.removeEventListener('resize', Charter.fixSize);
+		document.body.classList.remove('smaller');
 		document.body.classList.remove('small');
 		document.body.classList.remove('medium');
 		const bodyWidth = document.body.scrollWidth;
@@ -16,6 +20,12 @@ class Charter {
 			document.body.classList.remove('medium');
 			document.body.classList.add('small');
 		}
+		const newBodyWidth2 = document.body.scrollWidth;
+		if (newBodyWidth2 > windowWidth) {
+			document.body.classList.remove('medium');
+			document.body.classList.remove('small');
+			document.body.classList.add('smaller');
+		}
 		window.addEventListener('resize', Charter.fixSizes);
 	}
 
@@ -27,25 +37,22 @@ class Charter {
 		this.data = this.parent.innerText ? JSON.parse(this.parent.innerText.trim()) : [];
 		this.creator = io.github.crisstanza.Creator;
 		this.player = new JSSoundPlayer(parent);
-		this.parent.setAttribute('charter', this);
 		this.parent.innerText = '';
 	}
 
 	render() {
-		const startKeyIndex = this.#getStartKeyIndex(this.start);
-		for (let currentKeyIndex = startKeyIndex, currentFreqIndex = startKeyIndex, i = 0 ; i < this.maxKeys ; i++) {
-			const color = Charter.#KEYS.charAt(currentKeyIndex);
+		for (let currentKeyIndex = 0, i = 0 ; i < this.maxKeys ; i++) {
+			const color = Charter.#KEYS[this.start[0]].charAt(currentKeyIndex);
 			const className = this.#getClassName(color);
-			const freq = JSSoundPlayer.getFreq(currentFreqIndex, this.start.charAt(1));
+			const freq = JSSoundPlayer.getFreq(i, this.start);
 			const key = this.creator.html('div', {class: className, freq: freq}, this.parent);
 			currentKeyIndex++;
-			currentKeyIndex %= Charter.#KEYS.length;
-			currentFreqIndex++;
+			currentKeyIndex %= Charter.#KEYS[this.start[0]].length;
 			const extras = this.data[i];
 			if (extras) {
 				extras.forEach(extra => {
 					if (extra.order) {
-						this.creator.html('b', extra.color ? {class: 'color-' + extra.color} : {}, key, extra.order);
+						this.creator.html('b', extra.finger ? {class: 'color-finger-' + extra.finger} : {}, key, extra.order);
 					}
 				});
 			}
@@ -59,11 +66,7 @@ class Charter {
 
 	#getMaxKeys(size, start) {
 		const sizeFloor = Math.floor(size);
-		return sizeFloor * Charter.#KEYS.length + (size == sizeFloor ? 0 : this.#getHalfOctaveSize(start));
-	}
-
-	#getStartKeyIndex(start) {
-		return start.charAt(0) == 'C' ? 0 : 5;
+		return sizeFloor * Charter.#KEYS[this.start[0]].length + (size == sizeFloor ? 0 : this.#getHalfOctaveSize(start));
 	}
 
 	#getHalfOctaveSize(start) {
