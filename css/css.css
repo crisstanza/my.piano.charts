@@ -150,3 +150,5 @@ div.chart div.black + div.white {
 div.chart div.white + div.white {
 	margin-left: 1px;
 }
+
+.center { text-align: center; }

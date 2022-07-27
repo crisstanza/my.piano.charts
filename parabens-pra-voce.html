@@ -4,6 +4,7 @@
 		<title i18n="title.parabens-pra-voce">Parab&eacute;ns pra Voc&ecirc; - My Piano Charts</title>
 		<link rel="stylesheet" type="text/css" media="all" href="css/css.css" />
 		<link rel="stylesheet" type="text/css" media="all" href="css/i18n.css" />
+		<link rel="stylesheet" type="text/css" media="all" href="css/jssoundplayer.css" />
 		<link rel="stylesheet" type="text/css" media="all" href="css/github.css" />
 		<script src="js/i18n.js"></script>
 		<script src="js/lib/io.github.crisstanza.Cookie-Is-Good_1.0.3.js"></script>
@@ -16,7 +17,10 @@
 	</head>
 	<body>
 
-		<div class="center" i18n-flags="us,br,fr,es"></div>
+		<div class="center">
+			<span i18n-flags="us,br,fr,es"></span>
+			<span jssoundplayer-volume="true"></span>
+		</div>
 
 		<div class="row">
 			<div class="column-n"></div>
@@ -324,6 +328,17 @@
 						[{"order": "5", "finger": 2}]
 					]
 				</div>
+			</div>
+			<div class="column-n"></div>
+		</div>
+
+		<div class="row">
+			<div class="column-n"></div>
+			<div class="column-2">
+				<div inv="true" class="legend left-hand"></div>
+			</div>
+			<div class="column-2">
+				<div inv="true" class="legend right-hand"></div>
 			</div>
 			<div class="column-n"></div>
 		</div>

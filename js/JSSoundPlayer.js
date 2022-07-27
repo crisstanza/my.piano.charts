@@ -4,8 +4,41 @@ class JSSoundPlayer {
 		C: { reference: 9, freqs: [0, 0, 0, 0, 0, 0, 0, 0, 0, 440, 0, 0] },
 		F: { reference: 4, freqs: [0, 0, 0, 0, 440, 0, 0, 0, 0, 0, 0, 0] }
 	};
-	static #MAX_VOLUME = 0.1;
+	static #VOLUMES = { 'low': 0.2, 'mid': 0.4, 'hi': 0.8 };
+	static #DEFAULT_VOLUME = 'mid';
+	static #MAX_VOLUME = JSSoundPlayer.#VOLUMES[JSSoundPlayer.#DEFAULT_VOLUME];
 	static #DEFAULT_OCTAVE = 4;
+
+	static volumeClick(event) {
+		const newVolume = event.target.getAttribute('href').substring(1);
+		io.github.crisstanza.CookieIsGood.set('volume', newVolume, null, 365);
+		JSSoundPlayer.#MAX_VOLUME = JSSoundPlayer.#VOLUMES[newVolume];
+		JSSoundPlayer.volume();
+	}
+
+	static volume() {
+		let currentVolume;
+		const lastVolume = io.github.crisstanza.CookieIsGood.get('volume');
+		if (lastVolume === io.github.crisstanza.CookieIsGood.NOT_FOUND) {
+			currentVolume = JSSoundPlayer.#DEFAULT_VOLUME;
+		} else {
+			currentVolume = lastVolume;
+		}
+		JSSoundPlayer.#MAX_VOLUME = JSSoundPlayer.#VOLUMES[currentVolume];
+		const elements = document.querySelectorAll('[jssoundplayer-volume]');
+		elements.forEach((element) => {
+			element.innerText = '';
+			const volumes = [
+				{ name: 'low', icon: '&#128360;' },
+				{ name: 'mid', icon: '&#128361;' },
+				{ name: 'hi', icon: '&#128362;' }
+			];
+			volumes.forEach((volume) => {
+				const link = io.github.crisstanza.Creator.html('a', {href: `#${volume.name}`, border: 0, class: volume.name == currentVolume ? 'on' : 'off'}, element, volume.icon);
+				link.addEventListener('click', JSSoundPlayer.volumeClick);
+			});
+		});
+	}
 
 	static getFreq(index, startOctave) {
 		const octave = startOctave[1] ? startOctave[1] : JSSoundPlayer.#DEFAULT_OCTAVE;
