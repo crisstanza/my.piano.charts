@@ -17,11 +17,15 @@
 			'title.parabens-pra-voce': [ 'Happy Birthday to You - My Piano Charts', 'Parab&eacute;ns pra Voc&ecirc; - My Piano Charts', 'Happy Birthday to You - My Piano Charts', 'Happy Birthday to You - My Piano Charts' ],
 
 			'Circle-of-Fifths': [ 'Circle of Fifths', 'Ciclo das Quintas', 'Cycle des Quintes', 'Ciclo de Quintas' ],
+
 			'c-major': [ 'C Major', 'D&oacute; Maior', 'Do Majeur', 'Do Mayor' ],
 			'title.c-major_circle-of-fifths': [ 'C Major - Circle of Fifths - My Piano Charts', 'D&oacute; Maior - Ciclo das Quintas - My Piano Charts', 'Do Majeur - Cycle des Quintes - My Piano Charts', 'Do Mayor - Ciclo de Quintas - My Piano Charts' ],
 
+			'f-major': [ 'F Major (1<i>b</i>)', 'F&aacute; Maior (1<i>b</i>)', 'Fa Majeur (1<i>b</i>)', 'Fa Mayor (1<i>b</i>)' ],
+			'title.f-major_circle-of-fifths': [ 'F Major (1b) - Circle of Fifths - My Piano Charts', 'F&aacute; Maior (1b) - Ciclo das Quintas - My Piano Charts', 'Fa Majeur (1b) - Cycle des Quintes - My Piano Charts', 'Fa Mayor (1b) - Ciclo de Quintas - My Piano Charts' ],
+
 			'g-major': [ 'G Major (1#)', 'Sol Maior (1#)', 'Sol Majeur (1#)', 'Sol Mayor (1#)' ],
-			'title.g-major_circle-of-fifths': [ 'G Major - Circle of Fifths - My Piano Charts', 'Sol Maior - Ciclo das Quintas - My Piano Charts', 'Sol Majeur - Cycle des Quintes - My Piano Charts', 'Sol Mayor - Ciclo de Quintas - My Piano Charts' ],
+			'title.g-major_circle-of-fifths': [ 'G Major (1#) - Circle of Fifths - My Piano Charts', 'Sol Maior (1#) - Ciclo das Quintas - My Piano Charts', 'Sol Majeur (1#) - Cycle des Quintes - My Piano Charts', 'Sol Mayor (1#) - Ciclo de Quintas - My Piano Charts' ],
 
 			'...back': [ '...back', '...voltar', '...retour', '...de vuelta' ],
 		}
