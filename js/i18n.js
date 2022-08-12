@@ -18,7 +18,10 @@
 
 			'Circle-of-Fifths': [ 'Circle of Fifths', 'Ciclo das Quintas', 'Cycle des Quintes', 'Ciclo de Quintas' ],
 			'c-major': [ 'C Major', 'D&oacute; Maior', 'Do Majeur', 'Do Mayor' ],
-			'title.c-major_circle-of-fifths': [ 'C Major - Circle of Fifths - My Piano Charts', 'D&oacute; Maior - Ciclo das Quintas - My Piano Charts', 'Do Majeur - Cycle des Quintes - My Piano Charts', 'Do Mayor - Do Mayor - My Piano Charts' ],
+			'title.c-major_circle-of-fifths': [ 'C Major - Circle of Fifths - My Piano Charts', 'D&oacute; Maior - Ciclo das Quintas - My Piano Charts', 'Do Majeur - Cycle des Quintes - My Piano Charts', 'Do Mayor - Ciclo de Quintas - My Piano Charts' ],
+
+			'g-major': [ 'G Major (1#)', 'Sol Maior (1#)', 'Sol Majeur (1#)', 'Sol Mayor (1#)' ],
+			'title.g-major_circle-of-fifths': [ 'G Major - Circle of Fifths - My Piano Charts', 'Sol Maior - Ciclo das Quintas - My Piano Charts', 'Sol Majeur - Cycle des Quintes - My Piano Charts', 'Sol Mayor - Ciclo de Quintas - My Piano Charts' ],
 
 			'...back': [ '...back', '...voltar', '...retour', '...de vuelta' ],
 		}
