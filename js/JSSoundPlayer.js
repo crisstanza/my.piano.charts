@@ -13,14 +13,13 @@ class JSSoundPlayer {
 		const newVolume = event.target.getAttribute('href').substring(1);
 		io.github.crisstanza.CookieIsGood.set('volume', newVolume, null, 365);
 		JSSoundPlayer.#MAX_VOLUME = JSSoundPlayer.#VOLUMES[newVolume];
-		JSSoundPlayer.volume();
+		JSSoundPlayer.volume(newVolume);
 	}
 
-	static volume() {
-		let currentVolume;
+	static volume(currentVolume) {
 		const lastVolume = io.github.crisstanza.CookieIsGood.get('volume');
 		if (lastVolume === io.github.crisstanza.CookieIsGood.NOT_FOUND) {
-			currentVolume = JSSoundPlayer.#DEFAULT_VOLUME;
+			currentVolume = currentVolume ? currentVolume : JSSoundPlayer.#DEFAULT_VOLUME;
 		} else {
 			currentVolume = lastVolume;
 		}
