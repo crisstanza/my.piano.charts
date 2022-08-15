@@ -27,6 +27,12 @@
 			'g-major': [ 'G Major (1#)', 'Sol Maior (1#)', 'Sol Majeur (1#)', 'Sol Mayor (1#)' ],
 			'title.g-major_circle-of-fifths': [ 'G Major (1#) - Circle of Fifths - My Piano Charts', 'Sol Maior (1#) - Ciclo das Quintas - My Piano Charts', 'Sol Majeur (1#) - Cycle des Quintes - My Piano Charts', 'Sol Mayor (1#) - Ciclo de Quintas - My Piano Charts' ],
 
+			'bb-major': [ 'B<i>b</i> Major (2<i>b</i>)', 'Si Bem&oacute;l Maior (2<i>b</i>)', 'Si B&eacute;mol Majeur (2<i>b</i>)', 'Si Bemol Mayor (2<i>b</i>)' ],
+			'title.bb-major_circle-of-fifths': [ 'Bb Major (2b) - Circle of Fifths - My Piano Charts', 'Bb Maior (2b) - Ciclo das Quintas - My Piano Charts', 'Bb Majeur (2b) - Cycle des Quintes - My Piano Charts', 'B Mayor (2b) - Ciclo de Quintas - My Piano Charts' ],
+
+			'd-major': [ 'D Major (2#)', 'R&eacute; Maior (2#)', 'R&eacute; Majeur (2#)', 'Re Mayor (2#)' ],
+			'title.d-major_circle-of-fifths': [ 'D Major (2#) - Circle of Fifths - My Piano Charts', 'R&eacute; Maior (2#) - Ciclo das Quintas - My Piano Charts', 'Re Majeur (2#) - Cycle des Quintes - My Piano Charts', 'Re Mayor (2#) - Ciclo de Quintas - My Piano Charts' ],
+
 			'...back': [ '...back', '...voltar', '...retour', '...de vuelta' ],
 		}
 	};

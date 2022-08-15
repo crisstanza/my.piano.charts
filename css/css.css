@@ -159,6 +159,6 @@ ul.circle-of-fifths {
 	list-style: none;
 }
 
-ul.circle-of-fifths li:first-child {
+ul.circle-of-fifths li {
 	text-align: center;
 }
