@@ -34,10 +34,16 @@
 			'title.d-major_circle-of-fifths': [ 'D Major (2#) - Circle of Fifths - My Piano Charts', 'R&eacute; Maior (2#) - Ciclo das Quintas - My Piano Charts', 'Re Majeur (2#) - Cycle des Quintes - My Piano Charts', 'Re Mayor (2#) - Ciclo de Quintas - My Piano Charts' ],
 
 			'eb-major': [ 'E<i>b</i> Major (3<i>b</i>)', 'Mi Bem&oacute;l Maior (3<i>b</i>)', 'Mi B&eacute;mol Majeur (3<i>b</i>)', 'Mi Bemol Mayor (3<i>b</i>)' ],
-			'title.eb-major_circle-of-fifths': [ 'Eb Major (3b) - Circle of Fifths - My Piano Charts', 'Eb Maior (3b) - Ciclo das Quintas - My Piano Charts', 'Eb Majeur (3b) - Cycle des Quintes - My Piano Charts', 'E Mayor (3b) - Ciclo de Quintas - My Piano Charts' ],
+			'title.eb-major_circle-of-fifths': [ 'Eb Major (3b) - Circle of Fifths - My Piano Charts', 'Eb Maior (3b) - Ciclo das Quintas - My Piano Charts', 'Eb Majeur (3b) - Cycle des Quintes - My Piano Charts', 'Eb Mayor (3b) - Ciclo de Quintas - My Piano Charts' ],
 
 			'a-major': [ 'A Major (3#)', 'L&aacute; Maior (3#)', 'L&aacute; Majeur (3#)', 'La Mayor (3#)' ],
 			'title.a-major_circle-of-fifths': [ 'A Major (3#) - Circle of Fifths - My Piano Charts', 'L&aacute; Maior (3#) - Ciclo das Quintas - My Piano Charts', 'La Majeur (3#) - Cycle des Quintes - My Piano Charts', 'La Mayor (3#) - Ciclo de Quintas - My Piano Charts' ],
+
+			'ab-major': [ 'A<i>b</i> Major (4<i>b</i>)', 'L&aacute; Bem&oacute;l Maior (4<i>b</i>)', 'La B&eacute;mol Majeur (4<i>b</i>)', 'La Bemol Mayor (4<i>b</i>)' ],
+			'title.ab-major_circle-of-fifths': [ 'Ab Major (4b) - Circle of Fifths - My Piano Charts', 'Ab Maior (4b) - Ciclo das Quintas - My Piano Charts', 'Ab Majeur (4b) - Cycle des Quintes - My Piano Charts', 'Ab Mayor (4b) - Ciclo de Quintas - My Piano Charts' ],
+
+			'e-major': [ 'E Major (4#)', 'Mi Maior (4#)', 'Mi Majeur (4#)', 'Mi Mayor (4#)' ],
+			'title.e-major_circle-of-fifths': [ 'E Major (4#) - Circle of Fifths - My Piano Charts', 'Mi Maior (4#) - Ciclo das Quintas - My Piano Charts', 'Mi Majeur (4#) - Cycle des Quintes - My Piano Charts', 'Mi Mayor (4#) - Ciclo de Quintas - My Piano Charts' ],
 
 			'...back': [ '...back', '...voltar', '...retour', '...de vuelta' ],
 		}
