@@ -162,3 +162,8 @@ ul.circle-of-fifths {
 ul.circle-of-fifths li {
 	text-align: center;
 }
+
+h1.charts-name {
+	text-align: center;
+	padding-top: 15px;
+}
